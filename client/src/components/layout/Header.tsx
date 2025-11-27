@@ -3,7 +3,7 @@ import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import logoImage from '@assets/Generated Image November 27, 2025 - 6_52PM_1764287600268.png';
+import logoImage from '@assets/5d0e99f4-6e57-4f5e-9918-c71c7cae7098.jfif_1764287790360.png';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

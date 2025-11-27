@@ -1,5 +1,5 @@
 import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
-import logoImage from '@assets/Generated Image November 27, 2025 - 6_52PM_1764287600268.png';
+import logoImage from '@assets/5d0e99f4-6e57-4f5e-9918-c71c7cae7098.jfif_1764287790360.png';
 
 export default function Footer() {
   return (

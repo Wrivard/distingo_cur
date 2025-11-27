@@ -37,7 +37,7 @@
     Strict Palette requested:
     Black: #1b1b1b -> 0 0% 11%
     White: #F8F5E9 -> 48 54% 94%
-    Accent: #4C2610 -> 22 65% 18%
+    New Accent: #3A4B2C -> 93 26% 23% (approximate HSL for #3A4B2C)
   */
 
   --background: 0 0% 11%; /* #1b1b1b */
@@ -49,26 +49,26 @@
   --popover: 0 0% 11%; /* #1b1b1b */
   --popover-foreground: 48 54% 94%; /* #F8F5E9 */
 
-  /* Using Accent (Brown) as Primary Background */
-  --primary: 22 65% 18%; /* #4C2610 */
+  /* Using New Accent (Green) as Primary Background */
+  --primary: 93 26% 23%; /* #3A4B2C */
   --primary-foreground: 48 54% 94%; /* #F8F5E9 */
 
   /* Using White as Secondary (High Contrast Buttons) */
   --secondary: 48 54% 94%; /* #F8F5E9 */
-  --secondary-foreground: 22 65% 18%; /* #4C2610 (Brown text on white) */
+  --secondary-foreground: 93 26% 23%; /* #3A4B2C (Green text on white) */
 
   /* Muted elements */
-  --muted: 22 65% 18%; /* #4C2610 */
+  --muted: 93 26% 23%; /* #3A4B2C */
   --muted-foreground: 48 54% 60%; /* Dimmed White */
 
-  --accent: 22 65% 18%; /* #4C2610 */
+  --accent: 93 26% 23%; /* #3A4B2C */
   --accent-foreground: 48 54% 94%; /* #F8F5E9 */
 
-  --destructive: 0 62% 30%; /* Keeping standard error color or mapping to brown? keeping standard for safety but dimmed */
+  --destructive: 0 62% 30%;
   --destructive-foreground: 48 54% 94%;
 
-  --border: 22 65% 18%; /* #4C2610 */
-  --input: 22 65% 18%; /* #4C2610 */
+  --border: 93 26% 23%; /* #3A4B2C */
+  --input: 93 26% 23%; /* #3A4B2C */
   --ring: 48 54% 94%; /* #F8F5E9 */
 
   --radius: 0.25rem;

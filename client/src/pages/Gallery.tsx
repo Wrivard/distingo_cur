@@ -8,13 +8,13 @@ import img3 from '@assets/generated_images/signature_craft_cocktail_in_crystal_g
 import img4 from '@assets/generated_images/cozy_bistro_table_setting_detail.png';
 
 const galleryImages = [
-  { src: img1, alt: 'Interior Ambience', span: 'col-span-2 row-span-2' },
+  { src: img1, alt: 'Ambiance Intérieure', span: 'col-span-2 row-span-2' },
   { src: img2, alt: 'Steak Frites', span: 'col-span-1 row-span-1' },
-  { src: img3, alt: 'Signature Cocktail', span: 'col-span-1 row-span-1' },
-  { src: img4, alt: 'Table Detail', span: 'col-span-1 row-span-1' },
+  { src: img3, alt: 'Cocktail Signature', span: 'col-span-1 row-span-1' },
+  { src: img4, alt: 'Détail de Table', span: 'col-span-1 row-span-1' },
   // Duplicating for grid fullness since we only generated 4
-  { src: img3, alt: 'Bar Vibes', span: 'col-span-1 row-span-1' },
-  { src: img2, alt: 'Food Detail', span: 'col-span-1 row-span-1' },
+  { src: img3, alt: 'Ambiance Bar', span: 'col-span-1 row-span-1' },
+  { src: img2, alt: 'Détail Culinaire', span: 'col-span-1 row-span-1' },
 ];
 
 export default function Gallery() {
@@ -23,9 +23,9 @@ export default function Gallery() {
       <div className="bg-background min-h-screen pb-20">
         <div className="bg-primary text-primary-foreground py-20 text-center mb-12">
            <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">Gallery</h1>
+            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">Galerie</h1>
             <p className="text-lg md:text-xl opacity-80 max-w-2xl mx-auto">
-              A glimpse into the Distingo experience.
+              Un aperçu de l'expérience Distingo.
             </p>
            </div>
         </div>

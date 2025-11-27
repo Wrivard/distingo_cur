@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Menu, X, Phone, Calendar } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import logoImage from '@assets/Generated Image November 27, 2025 - 6_48PM 1_1764287491381.png';
@@ -19,10 +19,10 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
+    { href: '/', label: 'Accueil' },
+    { href: '/about', label: 'À Propos' },
     { href: '/menu', label: 'Menu' },
-    { href: '/gallery', label: 'Gallery' },
+    { href: '/gallery', label: 'Galerie' },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -58,7 +58,7 @@ export default function Header() {
           ))}
           <Link href="/contact">
             <Button size="sm" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
-              Book a Table
+              Réserver
             </Button>
           </Link>
         </nav>
@@ -91,7 +91,7 @@ export default function Header() {
             ))}
             <Link href="/contact">
               <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                Book a Table
+                Réserver
               </Button>
             </Link>
           </nav>

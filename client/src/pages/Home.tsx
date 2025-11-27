@@ -32,23 +32,23 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-secondary font-sans uppercase tracking-[0.2em] mb-4 text-sm md:text-base">Est. 2025 • Montreal</h2>
+            <h2 className="text-secondary font-sans uppercase tracking-[0.2em] mb-4 text-sm md:text-base">Est. 2025 • Montréal</h2>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 leading-tight">
               Distingo <br />
               <span className="italic text-white/90 font-light">Resto Pub</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-              Where rustic charm meets culinary elegance. Experience the perfect blend of cozy bistro vibes and upscale gastronomy.
+              Où le charme rustique rencontre l'élégance culinaire. Découvrez le mélange parfait entre l'ambiance bistro chaleureuse et la gastronomie haut de gamme.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/menu">
                 <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground min-w-[180px] text-lg h-14">
-                  View Menu
+                  Voir le Menu
                 </Button>
               </Link>
               <Link href="/contact">
                 <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary min-w-[180px] text-lg h-14">
-                  Book a Table
+                  Réserver
                 </Button>
               </Link>
             </div>
@@ -63,21 +63,21 @@ export default function Home() {
             <div className="relative aspect-[4/5] md:aspect-square rounded-lg overflow-hidden shadow-xl">
               <img 
                 src={dishImage} 
-                alt="Signature Dish" 
+                alt="Plat Signature" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
             <div className="space-y-8 md:pl-12">
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary">
-                A Modern Take on <br />
-                <span className="text-secondary italic">Classic Comfort</span>
+                Une Approche Moderne du <br />
+                <span className="text-secondary italic">Confort Classique</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Located in the heart of Montreal, Distingo offers a sanctuary from the bustling city streets. We believe in the power of good food and great company. Our kitchen serves up elevated pub classics alongside innovative seasonal dishes, all prepared with locally sourced ingredients.
+                Situé au cœur de Montréal, Distingo offre un sanctuaire loin de l'agitation urbaine. Nous croyons au pouvoir de la bonne cuisine et de la bonne compagnie. Notre cuisine propose des classiques de pub élevés ainsi que des plats saisonniers innovants, tous préparés avec des ingrédients locaux.
               </p>
               <Link href="/about">
                 <a className="inline-flex items-center text-primary font-medium hover:text-secondary transition-colors border-b border-primary hover:border-secondary pb-1">
-                  Our Story <ArrowRight className="ml-2 w-4 h-4" />
+                  Notre Histoire <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </Link>
             </div>
@@ -94,12 +94,12 @@ export default function Home() {
               <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors">
                 <UtensilsCrossed className="w-6 h-6 text-secondary group-hover:text-secondary-foreground" />
               </div>
-              <h3 className="text-2xl font-serif font-bold mb-4">Gourmet Kitchen</h3>
+              <h3 className="text-2xl font-serif font-bold mb-4">Cuisine Gastronomique</h3>
               <p className="text-primary-foreground/70 mb-6">
-                From our signature steak frites to artisanal burgers, every dish is crafted with passion and precision.
+                De nos frites signature à nos burgers artisanaux, chaque plat est élaboré avec passion et précision.
               </p>
               <Link href="/menu">
-                <a className="text-secondary uppercase tracking-wider text-sm font-semibold hover:text-white transition-colors">See Menu</a>
+                <a className="text-secondary uppercase tracking-wider text-sm font-semibold hover:text-white transition-colors">Voir Menu</a>
               </Link>
             </div>
 
@@ -108,12 +108,12 @@ export default function Home() {
               <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors">
                 <Wine className="w-6 h-6 text-secondary group-hover:text-secondary-foreground" />
               </div>
-              <h3 className="text-2xl font-serif font-bold mb-4">Curated Drinks</h3>
+              <h3 className="text-2xl font-serif font-bold mb-4">Boissons Sélectionnées</h3>
               <p className="text-primary-foreground/70 mb-6">
-                Explore our extensive wine list, local craft beers, and signature cocktails designed by expert mixologists.
+                Explorez notre vaste carte des vins, nos bières artisanales locales et nos cocktails signature conçus par des mixologues experts.
               </p>
               <Link href="/menu">
-                <a className="text-secondary uppercase tracking-wider text-sm font-semibold hover:text-white transition-colors">Drink List</a>
+                <a className="text-secondary uppercase tracking-wider text-sm font-semibold hover:text-white transition-colors">Carte des Boissons</a>
               </Link>
             </div>
 
@@ -122,12 +122,12 @@ export default function Home() {
               <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors">
                 <Music className="w-6 h-6 text-secondary group-hover:text-secondary-foreground" />
               </div>
-              <h3 className="text-2xl font-serif font-bold mb-4">Cozy Atmosphere</h3>
+              <h3 className="text-2xl font-serif font-bold mb-4">Atmosphère Chaleureuse</h3>
               <p className="text-primary-foreground/70 mb-6">
-                Warm lighting, comfortable seating, and a curated playlist create the perfect backdrop for your evening.
+                Un éclairage chaleureux, des sièges confortables et une liste de lecture soignée créent le cadre idéal pour votre soirée.
               </p>
               <Link href="/gallery">
-                <a className="text-secondary uppercase tracking-wider text-sm font-semibold hover:text-white transition-colors">View Gallery</a>
+                <a className="text-secondary uppercase tracking-wider text-sm font-semibold hover:text-white transition-colors">Voir Galerie</a>
               </Link>
             </div>
           </div>
@@ -139,16 +139,16 @@ export default function Home() {
          <div className="absolute inset-0 z-0">
           <img 
             src={drinkImage} 
-            alt="Craft Cocktail" 
+            alt="Cocktail Artisanal" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 text-center">
-           <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Taste the Distinction</h2>
+           <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Goûtez à la Distinction</h2>
            <Link href="/contact">
              <Button size="lg" className="bg-white text-primary hover:bg-secondary hover:text-secondary-foreground border-none h-14 px-8 text-lg">
-               Reserve Your Table
+               Réservez Votre Table
              </Button>
            </Link>
         </div>

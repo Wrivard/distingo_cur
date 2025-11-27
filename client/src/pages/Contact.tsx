@@ -11,12 +11,12 @@ import { useToast } from '@/hooks/use-toast';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
-  phone: z.string().min(10, "Phone number must be at least 10 digits"),
-  date: z.string().min(1, "Please select a date"),
-  time: z.string().min(1, "Please select a time"),
-  guests: z.string().min(1, "Please select number of guests"),
+  name: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
+  email: z.string().email("Adresse courriel invalide"),
+  phone: z.string().min(10, "Le numéro de téléphone doit contenir au moins 10 chiffres"),
+  date: z.string().min(1, "Veuillez sélectionner une date"),
+  time: z.string().min(1, "Veuillez sélectionner une heure"),
+  guests: z.string().min(1, "Veuillez sélectionner le nombre d'invités"),
   notes: z.string().optional(),
 });
 
@@ -38,8 +38,8 @@ export default function Contact() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     toast({
-      title: "Request Sent",
-      description: "We have received your reservation request. We will confirm shortly.",
+      title: "Demande Envoyée",
+      description: "Nous avons bien reçu votre demande de réservation. Nous vous confirmerons sous peu.",
     });
     form.reset();
   }
@@ -48,9 +48,9 @@ export default function Contact() {
     <Layout>
        <div className="bg-primary text-primary-foreground py-20 text-center">
           <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">Contact Us</h1>
+          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">Contactez-nous</h1>
           <p className="text-lg md:text-xl opacity-80 max-w-2xl mx-auto">
-            Book a table or get in touch. We look forward to welcoming you.
+            Réservez une table ou contactez-nous. Nous avons hâte de vous accueillir.
           </p>
           </div>
       </div>
@@ -60,9 +60,9 @@ export default function Contact() {
           {/* Contact Info */}
           <div className="space-y-12">
             <div>
-              <h2 className="text-3xl font-serif font-bold mb-6 text-primary">Get in Touch</h2>
+              <h2 className="text-3xl font-serif font-bold mb-6 text-primary">Entrer en Contact</h2>
               <p className="text-muted-foreground mb-8">
-                Have questions about our menu, private events, or dietary restrictions? Give us a call or send us an email.
+                Des questions sur notre menu, les événements privés ou les restrictions alimentaires ? Appelez-nous ou envoyez-nous un courriel.
               </p>
               
               <div className="space-y-6">
@@ -71,8 +71,8 @@ export default function Contact() {
                     <MapPin className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-primary">Location</h3>
-                    <p className="text-muted-foreground">1234 Saint-Denis St, Montreal, QC H2X 3K4</p>
+                    <h3 className="font-bold text-lg text-primary">Adresse</h3>
+                    <p className="text-muted-foreground">1234 Rue Saint-Denis, Montréal, QC H2X 3K4</p>
                   </div>
                 </div>
 
@@ -81,7 +81,7 @@ export default function Contact() {
                     <Phone className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-primary">Phone</h3>
+                    <h3 className="font-bold text-lg text-primary">Téléphone</h3>
                     <p className="text-muted-foreground">(514) 555-0123</p>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ export default function Contact() {
                     <Mail className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-primary">Email</h3>
+                    <h3 className="font-bold text-lg text-primary">Courriel</h3>
                     <p className="text-muted-foreground">info@distingo.com</p>
                   </div>
                 </div>
@@ -100,11 +100,11 @@ export default function Contact() {
                     <Clock className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-primary">Hours</h3>
-                    <p className="text-muted-foreground">Mon-Wed: 4pm-11pm</p>
-                    <p className="text-muted-foreground">Thu-Fri: 4pm-1am</p>
-                    <p className="text-muted-foreground">Sat: 5pm-2am</p>
-                    <p className="text-muted-foreground">Sun: 5pm-11pm</p>
+                    <h3 className="font-bold text-lg text-primary">Heures</h3>
+                    <p className="text-muted-foreground">Lun-Mer: 16h-23h</p>
+                    <p className="text-muted-foreground">Jeu-Ven: 16h-01h</p>
+                    <p className="text-muted-foreground">Sam: 17h-02h</p>
+                    <p className="text-muted-foreground">Dim: 17h-23h</p>
                   </div>
                 </div>
               </div>
@@ -113,7 +113,7 @@ export default function Contact() {
             {/* Map Placeholder */}
             <div className="w-full h-64 bg-muted rounded-lg overflow-hidden relative group">
               <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-muted-foreground">
-                <span className="flex items-center gap-2"><MapPin /> Map Placeholder</span>
+                <span className="flex items-center gap-2"><MapPin /> Carte</span>
               </div>
               {/* Ideally embed a google map iframe here */}
             </div>
@@ -121,7 +121,7 @@ export default function Contact() {
 
           {/* Reservation Form */}
           <div className="bg-card shadow-lg rounded-lg p-8 border border-border">
-            <h2 className="text-3xl font-serif font-bold mb-6 text-primary">Make a Reservation</h2>
+            <h2 className="text-3xl font-serif font-bold mb-6 text-primary">Faire une Réservation</h2>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -130,9 +130,9 @@ export default function Contact() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Name</FormLabel>
+                        <FormLabel>Nom</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your name" {...field} />
+                          <Input placeholder="Votre nom" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -143,7 +143,7 @@ export default function Contact() {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Phone</FormLabel>
+                        <FormLabel>Téléphone</FormLabel>
                         <FormControl>
                           <Input placeholder="(555) 555-5555" {...field} />
                         </FormControl>
@@ -158,9 +158,9 @@ export default function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>Courriel</FormLabel>
                       <FormControl>
-                        <Input placeholder="your@email.com" {...field} />
+                        <Input placeholder="votre@email.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -186,7 +186,7 @@ export default function Contact() {
                     name="time"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Time</FormLabel>
+                        <FormLabel>Heure</FormLabel>
                         <FormControl>
                           <Input type="time" {...field} />
                         </FormControl>
@@ -201,18 +201,18 @@ export default function Contact() {
                   name="guests"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Guests</FormLabel>
+                      <FormLabel>Invités</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select number of guests" />
+                            <SelectValue placeholder="Nombre d'invités" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
                           {[1, 2, 3, 4, 5, 6, 7, 8].map(num => (
-                            <SelectItem key={num} value={num.toString()}>{num} {num === 1 ? 'Person' : 'People'}</SelectItem>
+                            <SelectItem key={num} value={num.toString()}>{num} {num === 1 ? 'Personne' : 'Personnes'}</SelectItem>
                           ))}
-                          <SelectItem value="more">8+ (Call us)</SelectItem>
+                          <SelectItem value="more">8+ (Appelez-nous)</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -225,9 +225,9 @@ export default function Contact() {
                   name="notes"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Special Requests (Optional)</FormLabel>
+                      <FormLabel>Demandes Spéciales (Optionnel)</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Allergies, special occasion, etc." {...field} />
+                        <Textarea placeholder="Allergies, occasion spéciale, etc." {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -235,7 +235,7 @@ export default function Contact() {
                 />
 
                 <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold py-6 text-lg">
-                  Request Reservation
+                  Demander une Réservation
                 </Button>
               </form>
             </Form>

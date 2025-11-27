@@ -20,50 +20,50 @@ type MenuCategory = {
 
 const menuData: MenuCategory[] = [
   {
-    id: 'starters',
-    title: 'Starters',
+    id: 'entrees',
+    title: 'Entrées',
     items: [
-      { name: 'Beef Tartare', description: 'Hand-cut beef tenderloin, capers, shallots, egg yolk, crostini', price: '$18', tag: 'Popular' },
-      { name: 'Truffle Fries', description: 'House-cut fries, parmesan, truffle oil, garlic aioli', price: '$12', tag: 'V' },
-      { name: 'Burrata Salad', description: 'Heirloom tomatoes, fresh basil, balsamic glaze, sourdough crisp', price: '$21', tag: 'V' },
-      { name: 'Crispy Calamari', description: 'Lightly dusted, lemon pepper, marinara dip', price: '$16' },
-      { name: 'Onion Soup', description: 'Caramelized onions, beef broth, sherry, gruyère gratiné', price: '$14' },
+      { name: 'Tartare de Bœuf', description: 'Filet de bœuf coupé au couteau, câpres, échalotes, jaune d\'œuf, crostini', price: '18$', tag: 'Populaire' },
+      { name: 'Frites à la Truffe', description: 'Frites maison, parmesan, huile de truffe, aïoli à l\'ail', price: '12$', tag: 'V' },
+      { name: 'Salade Burrata', description: 'Tomates ancestrales, basilic frais, glaçage balsamique, croustille au levain', price: '21$', tag: 'V' },
+      { name: 'Calamars Croustillants', description: 'Légèrement panés, poivre citronné, trempette marinara', price: '16$' },
+      { name: 'Soupe à l\'Oignon', description: 'Oignons caramélisés, bouillon de bœuf, sherry, gratiné au gruyère', price: '14$' },
     ]
   },
   {
-    id: 'mains',
-    title: 'Mains',
+    id: 'plats',
+    title: 'Plats Principaux',
     items: [
-      { name: 'Steak Frites', description: '10oz AAA New York Strip, peppercorn sauce, house fries', price: '$34', tag: 'Signature' },
-      { name: 'Duck Confit', description: 'Crispy leg, wild mushroom risotto, cherry glaze', price: '$29' },
-      { name: 'Distingo Burger', description: 'Wagyu beef, aged cheddar, bacon jam, arugula, brioche bun', price: '$24' },
-      { name: 'Pan-Seared Salmon', description: 'Atlantic salmon, asparagus, lemon-dill beurre blanc', price: '$28' },
-      { name: 'Mushroom Ravioli', description: 'Ricotta stuffed, truffle cream sauce, toasted pine nuts', price: '$26', tag: 'V' },
+      { name: 'Steak Frites', description: 'Contre-filet AAA 10oz, sauce au poivre, frites maison', price: '34$', tag: 'Signature' },
+      { name: 'Confit de Canard', description: 'Cuisse croustillante, risotto aux champignons sauvages, glaçage aux cerises', price: '29$' },
+      { name: 'Burger Distingo', description: 'Bœuf Wagyu, cheddar vieilli, confiture de bacon, roquette, pain brioché', price: '24$' },
+      { name: 'Saumon Poêlé', description: 'Saumon de l\'Atlantique, asperges, beurre blanc citron-aneth', price: '28$' },
+      { name: 'Raviolis aux Champignons', description: 'Farcis à la ricotta, sauce crémeuse à la truffe, pignons de pin grillés', price: '26$', tag: 'V' },
     ]
   },
   {
     id: 'desserts',
     title: 'Desserts',
     items: [
-      { name: 'Crème Brûlée', description: 'Classic vanilla bean custard, caramelized sugar crust', price: '$10' },
-      { name: 'Dark Chocolate Mousse', description: '70% cocoa, sea salt, raspberry coulis', price: '$11' },
-      { name: 'Sticky Toffee Pudding', description: 'Warm date sponge, toffee sauce, vanilla ice cream', price: '$12' },
+      { name: 'Crème Brûlée', description: 'Crème vanille classique, croûte de sucre caramélisé', price: '10$' },
+      { name: 'Mousse au Chocolat Noir', description: '70% cacao, fleur de sel, coulis de framboise', price: '11$' },
+      { name: 'Pouding au Caramel', description: 'Gâteau aux dattes chaud, sauce caramel, glace vanille', price: '12$' },
     ]
   },
   {
-    id: 'drinks',
-    title: 'Drinks',
+    id: 'boissons',
+    title: 'Boissons',
     items: [
-      { name: 'Old Fashioned', description: 'Bourbon, bitters, sugar, orange peel', price: '$14' },
-      { name: 'Espresso Martini', description: 'Vodka, kahlua, fresh espresso', price: '$15' },
-      { name: 'Local IPA', description: 'Draft pint (16oz)', price: '$9' },
-      { name: 'House Red/White', description: 'Glass (6oz)', price: '$10' },
+      { name: 'Old Fashioned', description: 'Bourbon, amers, sucre, zeste d\'orange', price: '14$' },
+      { name: 'Espresso Martini', description: 'Vodka, kahlua, espresso frais', price: '15$' },
+      { name: 'IPA Locale', description: 'Pinte en fût (16oz)', price: '9$' },
+      { name: 'Vin Maison Rouge/Blanc', description: 'Verre (6oz)', price: '10$' },
     ]
   }
 ];
 
 export default function Menu() {
-  const [activeTab, setActiveTab] = useState('starters');
+  const [activeTab, setActiveTab] = useState('entrees');
 
   return (
     <Layout>
@@ -71,16 +71,16 @@ export default function Menu() {
         {/* Header */}
         <div className="bg-primary text-primary-foreground py-20 text-center mb-12">
            <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">Our Menu</h1>
+            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">Notre Menu</h1>
             <p className="text-lg md:text-xl opacity-80 max-w-2xl mx-auto">
-              Seasonally inspired dishes crafted with locally sourced ingredients.
+              Plats d'inspiration saisonnière élaborés avec des ingrédients locaux.
             </p>
            </div>
         </div>
 
         {/* Menu Content */}
         <div className="container mx-auto px-4 max-w-4xl">
-          <Tabs defaultValue="starters" onValueChange={setActiveTab} className="w-full">
+          <Tabs defaultValue="entrees" onValueChange={setActiveTab} className="w-full">
             <div className="flex justify-center mb-12">
               <TabsList className="bg-muted/50 p-1 h-auto flex-wrap justify-center">
                 {menuData.map((category) => (

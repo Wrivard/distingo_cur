@@ -138,12 +138,12 @@ function MenuItemCard({ item, index }: { item: MenuItem; index: number }) {
           >
             <div className="relative">
               {/* Glow effect */}
-              <div className="absolute -inset-4 bg-gold/10 blur-3xl rounded-full" />
+              <div className="absolute -inset-4 bg-accent/10 blur-3xl rounded-full" />
               
               {/* Image container with fancy border */}
-              <div className="relative w-52 h-52 rounded-lg overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] ring-1 ring-gold/40">
+              <div className="relative w-52 h-52 rounded-lg overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] ring-1 ring-accent/40">
                 {/* Animated gradient border */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gold/30 via-transparent to-gold/30 animate-pulse" />
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-transparent to-accent/30 animate-pulse" />
                 
                 <img
                   src={item.image}
@@ -161,10 +161,10 @@ function MenuItemCard({ item, index }: { item: MenuItem; index: number }) {
                 </div>
                 
                 {/* Corner accents */}
-                <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-gold/50" />
-                <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-gold/50" />
-                <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-gold/50" />
-                <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-gold/50" />
+                <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-accent/50" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-accent/50" />
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-accent/50" />
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-accent/50" />
               </div>
             </div>
           </motion.div>

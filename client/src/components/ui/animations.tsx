@@ -439,7 +439,7 @@ export function CursorGlow() {
       ref={cursorRef}
       className="fixed w-64 h-64 pointer-events-none z-0 opacity-20 hidden md:block"
       style={{
-        background: 'radial-gradient(circle, rgba(201,169,98,0.15) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(196,164,132,0.15) 0%, transparent 70%)',
         transform: 'translate(-50%, -50%)',
         transition: 'left 0.5s ease-out, top 0.5s ease-out',
       }}

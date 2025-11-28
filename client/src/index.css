@@ -38,7 +38,7 @@
     Deep Charcoal: #141414 -> 0 0% 8%
     Warm Cream: #F5F0E8 -> 36 33% 94%
     Forest Green Primary: #3A4B2C -> 93 26% 23%
-    Soft Copper: #C4A484 -> 30 30% 64%
+    Sage Green Accent: #8B9A7D -> 93 14% 55%
   */
 
   --background: 0 0% 8%;
@@ -62,8 +62,8 @@
   --muted: 0 0% 15%;
   --muted-foreground: 36 20% 75%;
 
-  /* Accent - Soft Copper (warm, muted, elegant) */
-  --accent: 30 30% 64%;
+  /* Accent - Sage Green (elegant, natural) */
+  --accent: 93 14% 55%;
   --accent-foreground: 0 0% 8%;
 
   --destructive: 0 62% 30%;
@@ -71,7 +71,7 @@
 
   --border: 0 0% 20%;
   --input: 0 0% 18%;
-  --ring: 30 30% 64%;
+  --ring: 93 14% 55%;
 
   --radius: 0.25rem;
 }
@@ -152,9 +152,9 @@
 
 /* ===== CUSTOM UTILITY CLASSES ===== */
 
-/* Copper accent text */
+/* Sage green accent text */
 .text-gold {
-  color: hsl(30 30% 64%);
+  color: hsl(93 14% 55%);
 }
 
 /* Warm cream text for high contrast */
@@ -169,10 +169,10 @@
   font-weight: 400;
 }
 
-/* Section divider with copper accent */
+/* Section divider with sage green accent */
 .divider-gold {
   @apply w-24 h-0.5 mx-auto my-8;
-  background: linear-gradient(90deg, transparent, hsl(30 30% 64%), transparent);
+  background: linear-gradient(90deg, transparent, hsl(93 14% 55%), transparent);
 }
 
 /* Card hover effect */
@@ -183,3 +183,58 @@
   @apply -translate-y-1;
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
 }
+
+/* ===== PREMIUM ANIMATIONS ===== */
+
+/* Smooth fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Subtle float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Gentle pulse glow */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+/* Smooth slide up */
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Stagger delays for children */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }

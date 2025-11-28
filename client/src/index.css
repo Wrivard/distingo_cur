@@ -37,8 +37,8 @@
     Refined Color Palette:
     Deep Charcoal: #141414 -> 0 0% 8%
     Warm Cream: #F5F0E8 -> 36 33% 94%
-    Forest Green Accent: #3A4B2C -> 93 26% 23%
-    Warm Gold: #C9A962 -> 43 47% 59%
+    Forest Green Primary: #3A4B2C -> 93 26% 23%
+    Soft Copper: #C4A484 -> 30 30% 64%
   */
 
   --background: 0 0% 8%;
@@ -62,8 +62,8 @@
   --muted: 0 0% 15%;
   --muted-foreground: 36 20% 75%;
 
-  /* Accent - Warm Gold */
-  --accent: 43 47% 59%;
+  /* Accent - Soft Copper (warm, muted, elegant) */
+  --accent: 30 30% 64%;
   --accent-foreground: 0 0% 8%;
 
   --destructive: 0 62% 30%;
@@ -71,7 +71,7 @@
 
   --border: 0 0% 20%;
   --input: 0 0% 18%;
-  --ring: 43 47% 59%;
+  --ring: 30 30% 64%;
 
   --radius: 0.25rem;
 }
@@ -152,9 +152,9 @@
 
 /* ===== CUSTOM UTILITY CLASSES ===== */
 
-/* Gold accent text */
+/* Copper accent text */
 .text-gold {
-  color: hsl(43 47% 59%);
+  color: hsl(30 30% 64%);
 }
 
 /* Warm cream text for high contrast */
@@ -169,10 +169,10 @@
   font-weight: 400;
 }
 
-/* Section divider with gold accent */
+/* Section divider with copper accent */
 .divider-gold {
   @apply w-24 h-0.5 mx-auto my-8;
-  background: linear-gradient(90deg, transparent, hsl(43 47% 59%), transparent);
+  background: linear-gradient(90deg, transparent, hsl(30 30% 64%), transparent);
 }
 
 /* Card hover effect */

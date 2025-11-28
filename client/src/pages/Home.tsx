@@ -2,28 +2,69 @@ import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 import { ArrowRight, UtensilsCrossed, Wine, Music } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { useRef } from 'react';
 
 // Import generated assets
 import heroImage from '@assets/60e3fd14-123e-4568-a2fa-a1001c9d094e_1764287212509.jfif';
 import dishImage from '@assets/generated_images/gourmet_steak_frites_dish.png';
 import drinkImage from '@assets/generated_images/signature_craft_cocktail_in_crystal_glass.png';
 
+// Animation variants
+const fadeInUp = {
+  initial: { opacity: 0, y: 60 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }
+};
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const scaleIn = {
+  initial: { opacity: 0, scale: 0.9 },
+  animate: { opacity: 1, scale: 1 },
+  transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }
+};
+
 export default function Home() {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0.3]);
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={heroImage} 
-            alt="Distingo Interior" 
+      {/* Hero Section with Parallax */}
+      <section ref={heroRef} className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+        {/* Background Image with Parallax */}
+        <motion.div
+          className="absolute inset-0 z-0"
+          style={{ y: heroY, scale: heroScale }}
+        >
+          <motion.img
+            src={heroImage}
+            alt="Distingo Interior"
             className="w-full h-full object-cover"
+            initial={{ scale: 1.2 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <motion.div
+            className="absolute inset-0 bg-black/50"
+            style={{ opacity: heroOpacity }}
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-background" />
-        </div>
+        </motion.div>
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">

@@ -112,16 +112,16 @@ export default function Menu() {
                     >
                       <div className="flex-1 pr-8">
                         <div className="flex items-center gap-3 mb-1">
-                          <h3 className="text-xl font-bold font-serif text-primary">{item.name}</h3>
+                          <h3 className="text-lg font-bold font-serif text-foreground">{item.name}</h3>
                           {item.tag && (
-                            <span className="text-xs font-bold uppercase tracking-wider bg-secondary/20 text-secondary-foreground px-2 py-0.5 rounded-full">
+                            <span className="text-[10px] font-bold uppercase tracking-wider bg-primary/20 text-primary-foreground px-2 py-0.5 rounded-full border border-primary/30">
                               {item.tag}
                             </span>
                           )}
                         </div>
-                        <p className="text-muted-foreground font-light italic">{item.description}</p>
+                        <p className="text-sm text-muted-foreground italic mt-1">{item.description}</p>
                       </div>
-                      <div className="text-xl font-bold text-secondary font-serif">{item.price}</div>
+                      <div className="text-lg font-bold text-foreground font-serif">{item.price}</div>
                     </div>
                   ))}
                 </motion.div>

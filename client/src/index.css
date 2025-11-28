@@ -34,42 +34,42 @@
 
 :root {
   /* 
-    Strict Palette requested:
+    Clean Visual Hierarchy:
     Black: #1b1b1b -> 0 0% 11%
-    White: #F8F5E9 -> 48 54% 94%
-    New Accent: #3A4B2C -> 93 26% 23% (approximate HSL for #3A4B2C)
+    Clean White: #FAFAFA -> 0 0% 98% (Replaces Yellowish White)
+    New Accent: #3A4B2C -> 93 26% 23%
   */
 
-  --background: 0 0% 11%; /* #1b1b1b */
-  --foreground: 48 54% 94%; /* #F8F5E9 */
+  --background: 0 0% 11%;
+  --foreground: 0 0% 98%; /* Clean White */
 
-  --card: 0 0% 11%; /* #1b1b1b */
-  --card-foreground: 48 54% 94%; /* #F8F5E9 */
+  --card: 0 0% 11%;
+  --card-foreground: 0 0% 98%;
 
-  --popover: 0 0% 11%; /* #1b1b1b */
-  --popover-foreground: 48 54% 94%; /* #F8F5E9 */
+  --popover: 0 0% 11%;
+  --popover-foreground: 0 0% 98%;
 
-  /* Using New Accent (Green) as Primary Background */
-  --primary: 93 26% 23%; /* #3A4B2C */
-  --primary-foreground: 48 54% 94%; /* #F8F5E9 */
+  /* Primary Backgrounds use the Green Accent */
+  --primary: 93 26% 23%;
+  --primary-foreground: 0 0% 98%;
 
-  /* Using White as Secondary (High Contrast Buttons) */
-  --secondary: 48 54% 94%; /* #F8F5E9 */
-  --secondary-foreground: 93 26% 23%; /* #3A4B2C (Green text on white) */
+  /* Secondary/Buttons - High Contrast */
+  --secondary: 0 0% 98%;
+  --secondary-foreground: 93 26% 23%;
 
-  /* Muted elements */
-  --muted: 93 26% 23%; /* #3A4B2C */
-  --muted-foreground: 48 54% 60%; /* Dimmed White */
+  /* Muted Text - Cleaner Gray instead of yellow tint */
+  --muted: 93 26% 23%;
+  --muted-foreground: 0 0% 65%; /* Neutral Gray */
 
-  --accent: 93 26% 23%; /* #3A4B2C */
-  --accent-foreground: 48 54% 94%; /* #F8F5E9 */
+  --accent: 93 26% 23%;
+  --accent-foreground: 0 0% 98%;
 
   --destructive: 0 62% 30%;
-  --destructive-foreground: 48 54% 94%;
+  --destructive-foreground: 0 0% 98%;
 
-  --border: 93 26% 23%; /* #3A4B2C */
-  --input: 93 26% 23%; /* #3A4B2C */
-  --ring: 48 54% 94%; /* #F8F5E9 */
+  --border: 93 26% 23%;
+  --input: 93 26% 23%;
+  --ring: 0 0% 98%;
 
   --radius: 0.25rem;
 }
@@ -83,5 +83,19 @@
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+  }
+  
+  /* Global Typography Scale */
+  h1 {
+    @apply text-4xl md:text-6xl font-bold leading-tight tracking-tight;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl font-bold leading-snug tracking-tight;
+  }
+  h3 {
+    @apply text-2xl font-semibold leading-snug;
+  }
+  p {
+    @apply leading-relaxed text-muted-foreground;
   }
 }

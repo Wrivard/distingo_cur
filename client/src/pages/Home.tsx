@@ -68,15 +68,15 @@ export default function Home() {
               />
             </div>
             <div className="space-y-8 md:pl-12">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary">
+              <h2 className="text-primary">
                 Une Approche Moderne du <br />
                 <span className="text-secondary italic">Confort Classique</span>
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-lg">
                 Situé au cœur de Montréal, Distingo offre un sanctuaire loin de l'agitation urbaine. Nous croyons au pouvoir de la bonne cuisine et de la bonne compagnie. Notre cuisine propose des classiques de pub élevés ainsi que des plats saisonniers innovants, tous préparés avec des ingrédients locaux.
               </p>
               <Link href="/about">
-                <a className="inline-flex items-center text-primary font-medium hover:text-secondary transition-colors border-b border-primary hover:border-secondary pb-1">
+                <a className="inline-flex items-center text-foreground font-medium hover:text-primary transition-colors border-b border-foreground hover:border-primary pb-1">
                   Notre Histoire <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </Link>
